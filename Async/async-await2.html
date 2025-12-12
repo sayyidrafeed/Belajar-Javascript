@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Await 2</title>
+</head>
+<body>
+<script>
+    function getProduct() {
+        const request = fetch('https://fakestoreapi.com/products/1')
+            .then(res=>res.json())
+            .then(json=>console.log(json))
+    }
+
+    // async function getProductName() {
+    //     response = await getProduct();
+    //     return response.name;
+    // }
+
+    getProduct();
+</script>
+</body>
+</html>

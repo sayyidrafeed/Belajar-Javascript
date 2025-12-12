@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener</title>
+</head>
+<body>
+<input id="clickMe" type="button" value="Klik saya(bener inimah ga di hek)">
+<script>
+    const clickMe = document.getElementById('clickMe');
+    clickMe.addEventListener('click', function () {
+        clickMe.setAttribute('value', 'Hehe udah ke lacak IP Adress mu deck');
+        console.log("Ip user berupa 192.168.1.100")
+        console.log(this);
+    })
+</script>
+</body>
+</html>

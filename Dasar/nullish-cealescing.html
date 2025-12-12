@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nullish Coalescing Operator</title>
+</head>
+<body>
+<script>
+    let cart;
+
+    let data = cart;
+
+    // If biasa
+    // if (data === undefined || data === null) {
+    //     data = "Kamu belum ada pesanan";
+    // }
+
+    // Nullish Coalescing Operator
+    data = cart ?? "Kamu belum ada pesanan";
+
+    document.writeln(data);
+</script>
+</body>
+</html>

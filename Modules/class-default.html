@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Export Default</title>
+    <script type="module" src="script/class-default.js"></script>
+</head>
+<body>
+<script type="module">
+    import {default as MyClass, sayHello} from './script/class-default.js';
+
+    const myInstanceSaya = new MyClass("Aduh");
+    console.log(myInstanceSaya.greet());
+
+    console.log(sayHello("Rafee"));
+</script>
+</body>
+</html>

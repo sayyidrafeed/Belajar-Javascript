@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Strict Mode(in html)</title>
+</head>
+<body>
+<script>
+    function duh() {
+        `use strict`;
+
+        const person = {
+            name: "Deade"
+        };
+
+        with (person) {
+            console.log(name);
+        };
+    };
+
+    duh();
+</script>
+</body>
+</html>

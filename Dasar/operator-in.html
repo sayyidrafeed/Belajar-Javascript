@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator In</title>
+</head>
+<body>
+<script>
+    const user = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 25
+    };
+
+    if ("firstName" in user) {
+        alert(`Halo ${user.firstName} ${user.lastName}`);
+    } else {
+        alert("user have no firstname.");
+    }
+
+    const names = [null, "Doe", null];
+    const nameresult = 0 in names;
+
+    console.log(`${nameresult}`);
+</script>
+</body>
+</html>

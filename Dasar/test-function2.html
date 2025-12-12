@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Function</title>
+</head>
+<body>
+<script>
+
+  // function prosesAngka (callbackSuccess, callbackFailed) {
+  //   const angka = prompt("Isi angka:");
+  //   if (angka > 10) {
+  //     callbackSuccess(angka);
+  //   } else {
+  //     callbackFailed(angka);
+  //   }
+  // }
+  //
+  // function berhasil(angka) {
+  //   console.log("Berhasil");
+  // }
+  //
+  // function gagal(angka) {
+  //   console.log("Gagal");
+  // }
+  //
+  // prosesAngka(berhasil, gagal);
+
+  function giveMeName(name) {
+      name("Rafee");
+  }
+
+  giveMeName(function (name) {
+      console.log(`Hallo, ${name}`);
+  });
+
+</script>
+</body>
+</html>

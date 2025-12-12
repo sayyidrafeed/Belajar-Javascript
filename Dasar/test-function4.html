@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anonymous Function</title>
+</head>
+<body>
+<script>
+    let say = function (name) {
+        document.writeln(` Halo ${name}!`);
+    }
+
+    say("Rafee");
+
+    function sayHello(name) {
+        document.writeln(`Halo ${name}`);
+    }
+
+    let katakan = sayHello;
+
+    katakan("Rafee");
+
+    function sayHello2(name) {
+        document.writeln(`Halo ${name}`);
+    }
+
+    sayHello2("Rafee");
+</script>
+</body>
+</html>

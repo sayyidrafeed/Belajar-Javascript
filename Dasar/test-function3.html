@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar Function</title>
+</head>
+<body>
+<script>
+    function numberProcess (callbackSuccess, callbackFailure) {
+        const input = prompt("Isi hanya angka.");
+        const num = Number(input);
+
+        if (isNaN(num)) {
+            document.writeln("W doxxing lu");
+            return;
+        }
+
+        if (num > 10) {
+            callbackSuccess(num);
+        } else if (num < 10) {
+            callbackFailure(num);
+        } else {
+            document.writeln("Pas 10, mantap.");
+        }
+    }
+
+    function success (num) {
+        document.writeln("Horray");
+    }
+
+    function failure (num) {
+        document.writeln("No....");
+    }
+
+    numberProcess(success, failure);
+</script>
+</body>
+</html>

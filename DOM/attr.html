@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attribute</title>
+</head>
+<body>
+<img id="gambar" src="aduh.png" alt="Ku tandai kau">
+
+<script>
+    const gambar = document.getElementById('gambar');
+    let modif = gambar.getAttributeNode('alt');
+    let modifa = gambar.getAttribute('alt');
+
+    console.log(modifa);
+    console.log(modif.name);
+    console.log(modif.value);
+
+    let img = document.getElementById("gambar");
+    let ubah = img.setAttribute('alt', 'aduh.png');
+    console.log(ubah);
+
+</script>
+</body>
+</html>

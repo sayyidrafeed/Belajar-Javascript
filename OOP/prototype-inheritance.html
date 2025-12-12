@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prorotype Inheritancce</title>
+</head>
+<body>
+<script>
+    function Employee(name, age, email) {
+        this.name = name
+        this.age = Number(age)
+        this.email = email
+    }
+
+    function Manager(name, age, email) {
+        this.name = name
+        this.age = age
+        this.email = email
+    }
+
+    const rafee = new Employee("Rafee", "18", "rafee@mail.com");
+
+    Manager.prototype = Object.create(Employee.prototype);
+
+    Manager.prototype.sayHello = function (name) {
+        console.log(`Hello ${name}! Saya ${this.name} Manager disini`);
+    }
+
+    Employee.prototype.sayHello = function (name) {
+        console.log(`Hello ${name}! Saya ${this.name} Karyawan disini`);
+    }
+
+    const djamil = new Manager("Djamil", "30", "djamil@mail.com")
+
+    rafee.sayHello("adi")
+    djamil.sayHello("adi")
+
+    console.log(rafee)
+    console.log(djamil)
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reflect</title>
+</head>
+<body>
+<script>
+
+    const person = {
+        name: 'John',
+        age: 42,
+        address: 'Jl. John Smith',
+    }
+
+    console.log(person);
+
+    Reflect.set(person, 'age', 43);
+    console.log(person);
+
+    console.log(Reflect.has(person, 'age'));
+
+</script>
+</body>
+</html>

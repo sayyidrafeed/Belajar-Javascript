@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class: Public Field</title>
+</head>
+<body>
+<script>
+    class User {
+        firstName;
+        lastName;
+        balance = 0;
+
+        constructor(firstName, lastName) {
+            this.firstName = firstName;
+            this.lastName = lastName;
+        }
+    }
+
+    const rafee = new User("rafee", "djamil")
+    console.log(rafee);
+    rafee.balance = 10000;
+    console.log(rafee);
+</script>
+</body>
+</html>

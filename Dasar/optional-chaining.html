@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Optional Chaining</title>
+</head>
+<body>
+<script>
+    let nama = {
+        id: {
+            country: "Zimbabwe"
+        }
+    };
+
+    let negara = nama?.id?.country;
+
+    // if (nama.id !== undefined && nama.id !== null) {
+    //     negara = nama.id;
+    // } else {
+    //     console.log("Berhasil")
+    // }
+
+    document.writeln(`${negara}`);
+    document.writeln(`halo`)
+</script>
+</body>
+</html>

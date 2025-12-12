@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Destructuring</title>
+</head>
+<body>
+<script>
+    const names = ["Muhammad", "Sayyid", "Rafee", "Djamil", "Anjay", "Aduh", 1];
+    // Cara non destructuring
+    // const firstName = names[0];
+    // const middleName = names[1];
+    // const lastName = names[3];
+    // console.log(names);
+    // console.table(names);
+    // console.log(firstName);
+    // console.log(middleName);
+    // console.log(lastName);
+
+    // Cara destructuring
+    // const [firstName, middleName1, middlename2, lastName, ...others] = names;
+    // console.log(firstName);
+    // console.log(middleName1);
+    // console.log(middlename2);
+    // console.log(lastName);
+    // console.log(others);
+
+    // Object
+    const person = {
+        firstName: "Rafee",
+        lastName: "Djamil",
+        address:{
+            street: "Jl. yang pernah ada",
+            code: 123455,
+            country: "Indonesia"
+        },
+        region: "Islam"
+    }
+
+    // Cara non
+    // console.log(person.firstName);
+    // console.log(person.lastName); // Dll
+
+    // Cara destructuring
+    {
+        const {firstName, lastName, address, region, ...others} = person;
+        console.log(firstName);
+        console.log(lastName);
+        console.log(address);
+        console.log(region);
+        console.log(others);
+    }
+
+    // const {street, code, country} = address;
+    // console.log(street);
+    // console.log(code);
+    // console.log(country);
+
+    // Atau langsung aja kaya tadi
+    {
+        const {firstName, lastName, address: {street, code, country}, region, ...others} = person;
+        console.log(firstName);
+        console.log(lastName);
+        console.log(street);
+        console.log(code);
+    }
+
+    {
+        const {
+            firstName: namaDepan,
+            lastName: namaBelakang,
+            address: {
+                street: jalan,
+                code: kodePos,
+                country: negara
+            },
+            region: Wilayah
+        } = person;
+
+        console.log(namaDepan);
+        console.log(jalan);
+        console.log(kodePos);
+    }
+</script>
+</body>
+</html>

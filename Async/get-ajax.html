@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get AJAX</title>
+</head>
+<body>
+<script>
+
+    const ajax = new XMLHttpRequest();
+    ajax.open("GET", "api/books.json", true);
+
+    ajax.addEventListener("load", function() {
+        const json = JSON.parse(ajax.responseText);
+        const response = document.createElement("div");
+        response.textContent = json.books.title;
+        document.body.appendChild(response);
+        console.log(json);
+    })
+
+    ajax.send();
+
+</script>
+</body>
+</html>

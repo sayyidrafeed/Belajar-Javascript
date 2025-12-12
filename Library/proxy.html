@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Proxy</title>
+</head>
+<body>
+<script>
+
+    {
+        const target = {
+            username: "",
+            password: "",
+            address: ""
+        };
+
+         const handler = {
+             get: function(target, key) {
+                 console.log(`Accessing ${key}`);
+                 return target[key];
+             },
+             set:  function(target, key, value) {
+                 console.log(`Changing ${key}`);
+                 target[key] = value;
+             }
+         };
+
+         console.log(target);
+
+         const proxy = new Proxy(target, handler);
+
+         proxy.username = "deade";
+
+         console.log(proxy.username);
+
+         console.log(target);
+
+
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Perbandingan</title>
+</head>
+<body>
+    <script>
+        let angka = 5;
+
+        let result = angka == "5";
+        document.writeln(result);
+        document.write("</br>");
+
+        result = angka === "5";
+        document.writeln(result);
+        document.write("</br>");
+
+        console.log(angka + 5 + result);
+
+        let nilai = 85;
+        const absen = 85;
+
+        let lulusnilai = nilai >= 85;
+        let lulusabsen = absen >= 85;
+        let lulus = lulusnilai && lulusabsen;
+
+        document.writeln("</br>");
+        document.writeln(lulus);
+
+    </script>
+</body>
+</html>

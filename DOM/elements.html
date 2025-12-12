@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Element</title>
+</head>
+<body>
+<h1 id="heading">Aduh</h1>
+<p id="paragraf">aduu</p>
+
+<div id="deade">
+
+</div>
+
+
+<script>
+    const heading = document.getElementById('heading');
+    heading.textContent = "Deade jirlah";
+    const paragraph = document.getElementById('paragraf');
+    paragraph.textContent = "Deade jirlah";
+
+    console.log(heading.textContent);
+    console.log(heading.id)
+    console.log(heading.classList)
+    console.log(heading.className);
+    console.log(heading.tagName);
+
+    heading.remove();
+    paragraph.remove();
+
+    const deade = document.getElementById('deade');
+
+    const prenk = document.createElement("h1");
+    prenk.textContent = "prenkk";
+    deade.appendChild(prenk);
+
+    const prenkecil = document.createElement('prenkkecil');
+    prenkecil.textContent = "prenkk aja inimah asli";
+    deade.appendChild(prenkecil);
+</script>
+</body>
+</html>

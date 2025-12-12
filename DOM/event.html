@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+</head>
+<body>
+    <h1>Click Yellow Box Below</h1>
+    <div id="canvas" style="width: 500px; height: 500px; background-color: yellow"></div>
+    <p id="text"></p>
+
+    <script>
+        const canvas = document.getElementById('canvas');
+        const text = document.getElementById('text');
+
+        canvas.onclick = function(event) {
+            text.textContent = `You clicked ${event.x} ${event.y}`;
+            canvas.style.backgroundColor = 'green';
+        }
+    </script>
+</body>
+</html>

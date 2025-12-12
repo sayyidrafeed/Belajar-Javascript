@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    // const user = {
+    //     firstName: 'John',
+    //     lastName: 'Doe',
+    //     age: 4
+    // };
+    //
+    // function deade() {
+    //     console.log(user);
+    // }
+    //
+    // for (let i = 0; i < 3; i++) {
+    //     deade()
+    // }
+
+    // function fn(a, b) {
+    //     return a + b;
+    // }
+    //
+    // console.log(fn(1, 2));
+    //
+    // function fn2(firstName, lastName) {
+    //     document.writeln(`<p>hello ${firstName} ${lastName}</p>`);
+    // }
+    //
+    // const halo = fn2("Eko", "Khannedy");
+    //
+    // console.log(halo)
+
+    // function sayHello(firstName, lastName) {
+    //     return `Hello ${firstName} ${lastName}`;
+    // }
+    //
+    // const halo = sayHello("Nama1", "Nama2");
+    //
+    // document.writeln(halo);
+
+    function getFinalScore(nilai) {
+        if (nilai >= 85) {
+            return "A";
+        } else if (nilai > 80) {
+            return "A-";
+        } else if (nilai > 75) {
+            return "B+";
+        } else if (nilai > 70) {
+            return "B-";
+        } else if (nilai > 65) {
+            return "C";
+        } else {
+            return "D";
+        }
+    }
+
+    document.writeln(getFinalScore(40));
+
+    // user = {
+    //     firstName: "john",
+    //     lastName: "Doe",
+    // }
+    //
+    // for (const [key, value] of  Object.entries(user)) {
+    //     console.log(key, value);
+    // }
+    //
+    // for (const [a, b ,c, d, e] in user) {
+    //     console.table(a, b ,c, d, e);
+    // }
+    //
+    // console.table(user);
+
+    function isContains(arr, searchValue) {
+        for (const element of arr) {
+            if (element === searchValue) {
+                return "Anjay";
+            }
+        }
+        return "Nope";
+    }
+
+    const arr = [1, 23, 3432, 123];
+    const value = 3432;
+
+    const search = isContains(arr, value);
+
+    console.log(search);
+
+    function sayHello(firstName, lastName) {
+        console.log(firstName);
+        console.log(lastName);
+    }
+
+    console.log(sayHello("eko"));
+
+</script>
+</body>
+</html>

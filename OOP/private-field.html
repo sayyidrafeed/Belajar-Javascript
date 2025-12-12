@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class: Private Field</title>
+</head>
+<body>
+<script>
+
+    class User {
+        #firstname;
+        #lastname;
+        #balance = 0;
+
+        constructor(firstname, lastname, balance) {
+            this.#firstname = firstname;
+            this.#lastname = lastname;
+            this.balance = balance;
+        }
+
+        gantiNama(namaBaru) {
+            this.#firstname = namaBaru;
+        }
+
+        #gantiBalance(balanceBaru) {
+            this.#balance = balanceBaru;
+        }
+    }
+
+    const rafee = new User("Rafee", "Djamil", 1000);
+    console.log(rafee);
+
+    rafee.gantiNama("aduh");
+    console.log(rafee);
+
+
+
+</script>
+</body>
+</html>

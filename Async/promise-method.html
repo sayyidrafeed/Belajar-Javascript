@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise Method</title>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <td>ID:</td>
+        <td id="id"></td>
+    </tr>
+    <tr>
+        <td>Nama:</td>
+        <td id="nama"></td>
+    </tr>
+    <tr>
+        <td>Harga</td>
+        <td id="harga"></td>
+    </tr>
+    </tbody>
+</table>
+
+<button id="button">Tekan</button>
+
+<script>
+    function getProduct(param) {
+        return new Promise((resolve, reject) => {
+            const ajax = new XMLHttpRequest();
+            ajax.open("GET", `api/${param}.json`);
+            ajax.onload = function () {
+                if (ajax.status === 200) {
+                    resolve(ajax.responseText);
+                } else {
+                    reject(Error(ajax.statusText));
+                }
+            }
+            ajax.send();
+        })
+    }
+
+    const button = document.getElementById("button");
+    button.addEventListener("click", function () {
+        const response = Promise.all([
+            getProduct("books"),
+            getProduct("books1"),
+            getProduct("books2")
+        ])
+
+        response
+            .then((values) =>
+                values.forEach((value, index) => {
+                    const product = JSON.parse(value);
+                    document.getElementById("id").innerText = product.id;
+                    document.getElementById("nama").innerText = product.nama;
+                    document.getElementById("harga").innerText = product.harga;
+
+                    console.log(product);
+                })
+            )
+            .catch((error) => console.error(error));
+    });
+</script>
+</body>
+</html>

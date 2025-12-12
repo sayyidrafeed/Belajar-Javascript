@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class: Static Field</title>
+</head>
+<body>
+<script>
+
+    class Configuration {
+        static name = "Rafee";
+        static version = "1.0.0";
+        static fields = [
+            { name: "name", type: "string" },
+        ]
+    }
+
+    class MathUtil {
+        sum(...numbers) {
+            return numbers.reduce((a, b) => a + b, 0);
+        }
+    }
+
+    const config = new Configuration();
+    console.log(config);
+    console.log(Configuration.name);
+
+    const mathUtil = new MathUtil();
+    console.log(mathUtil.sum(1, 2, 3));
+
+</script>
+</body>
+</html>

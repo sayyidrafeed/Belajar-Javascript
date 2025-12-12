@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sum Input</title>
+</head>
+<body>
+
+<script>
+    function sum(a, b = 1) {
+        return a + b;
+    }
+
+    const input1 = prompt("Angka 1");
+    const input2 = prompt("Angka 2");
+
+    const num1 = Number(input1);
+    const num2 = Number(input2);
+
+    if (!isNaN(num1) && !isNaN(num2)) {
+        const result = sum(num1, num2);
+        console.log(result);
+    } else {
+        console.log(`${num1} atau ${num2} tidak valid, mohon berikan angka bulat`);
+    }
+
+</script>
+</body>
+</html>

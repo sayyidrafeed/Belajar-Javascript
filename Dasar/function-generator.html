@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Generator</title>
+</head>
+<body>
+<script>
+    function* generator() {
+        yield "Muhammad";
+        yield "Sayyid";
+        yield "Rafee";
+        yield "Djamil";
+    }
+
+    console.log(generator());
+
+    const names = generator();
+    for (const name of names) {
+        console.log(name);
+    }
+</script>
+</body>
+</html>

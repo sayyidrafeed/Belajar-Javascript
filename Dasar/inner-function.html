@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inner Function</title>
+</head>
+<body>
+<script>
+    function sayDouble(nama) {
+        function say() {
+            console.log(nama);
+        }
+
+        say();
+        say();
+    }
+
+    sayDouble("HALLO");
+
+    function first() {
+        let isIt = false;
+
+        function second() {
+            if (isIt) {
+                console.log("Anjay");
+            } else {
+                console.log("Aduh");
+            }
+        }
+
+        second();
+        second();
+    }
+
+    first();
+</script>
+</body>
+</html>

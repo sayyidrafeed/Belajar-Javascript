@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Array</title>
+</head>
+<body>
+<script>
+
+    // {
+    //     const user = [
+    //         {
+    //             firstName: "John",
+    //             lastName: "Doe",
+    //             pass: "123"
+    //         },
+    //         {
+    //             firstName: "John",
+    //             lastName: "Doe",
+    //             pass: "123"
+    //         },
+    //         {
+    //             firstName: "John",
+    //             lastName: "Doe",
+    //             pass: "123"
+    //         }
+    //     ]
+    //
+    //     const test = ["John", "Doe"]
+    //
+    //     user.forEach((item) => {
+    //         console.log(item);
+    //     })
+    //
+    //     test.forEach((item) => {
+    //         console.log(item);
+    //     })
+    //
+    //     for (const item of user) {
+    //         console.log(item);
+    //     }
+    // }
+
+    // {
+    //     const array = [];
+    //
+    //     array.push("John");
+    //     array.push("Doe");
+    //     array.push("Dawg");
+    //
+    //     console.log(array);
+    //
+    //     array.shift();
+    //     array.shift();
+    //     array.shift();
+    //     array.shift();
+    //
+    //     console.log(array);
+    // }
+
+    {
+        const stack = [];
+
+        stack.push('a');
+        stack.push('b');
+        stack.push('c');
+
+        console.log(stack);
+
+        stack.pop();
+        stack.pop();
+
+        console.log(stack);
+    }
+
+    {
+        const array = [1, 2, 3, 4, 5, 5];
+
+        const find = array.find(function (item) {
+            return item <= 2;
+        });
+        console.log(find);
+        console.log(array.includes(5));
+        console.log(array.indexOf(5));
+        console.log(array.lastIndexOf(5));
+    }
+
+    {
+        const filer = [1, 2, 3, 4, 5, 6];
+
+        console.log(filer.filter(value => value % 2 === 1));
+        console.log(filer.filter(value => value % 0 === 5));
+
+        console.log(filer.map(value => String(value)));
+    }
+</script>
+</body>
+</html>

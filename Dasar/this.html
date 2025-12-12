@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kata Kunci This</title>
+</head>
+<body>
+<script>
+    console.log(this);
+
+    const belajar = function () {
+        console.log(this);
+    }
+
+    belajar();
+
+    const person = {
+        name: 'John',
+        sayHello: function () {
+            console.log(`Hello ${this.name}!`);
+        }
+    }
+
+    person.sayHello();
+
+    const anotherPerson = {
+        name: 'Alice',
+        sayHello: person.sayHello
+    }
+
+    anotherPerson.sayHello();
+
+
+</script>
+</body>
+</html>

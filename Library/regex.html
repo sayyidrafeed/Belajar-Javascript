@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RegExp</title>
+</head>
+<body>
+<script>
+
+    {
+        // 3 Cara Membuat RegExp
+        let regex1 = /[a]/;
+        let regex2 = new RegExp("[a]");
+        let regex3 = new RegExp(/[a]/);
+    }
+
+    {
+        // Aplikasi
+        const name = "Djamil Muhammad Sayyid Rafee' Djamil";
+
+        let regex = /sayyid/ig;
+        let regex2 = /'/ig;
+        let regex3 = /djamil/ig;
+
+        let result = regex.exec(name);
+        console.log(result);
+
+        let result2 = regex2.exec(name);
+        console.log(result2);
+
+        let test = regex.test(name);
+        console.log(test);
+
+        let hasil;
+        while ((hasil = regex3.exec(name))) {
+            console.log(hasil);
+        }
+    }
+
+    {
+        // Advance Regex
+        let name = "Rafa Rafi Rafo";
+        let regex1 = /raf[aiueo]/ig;
+
+        let hasil;
+        while ((hasil = regex1.exec(name)) !== null) {
+            console.log(hasil);
+        }
+
+    }
+
+    {
+        // String Method
+        let name = "Rafa Rafi Rafo";
+
+        console.log(name.match(/raf[aiueo]/ig));
+        console.log(name.split(/raf /ig));
+    }
+
+
+
+
+</script>
+</body>
+</html>

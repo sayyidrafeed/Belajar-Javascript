@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Operator Ternary</title>
+</head>
+<body>
+<script>
+    const login = false;
+    let sapa;
+
+    // If else biasa
+    // if (login == true) {
+    //     sapa = "Halo user!";
+    // } else {
+    //     sapa = "Anda belum login, ayo login"
+    // }
+
+    // ternary operator
+    sapa = login == true ? "Halo user" : "Anda belum login, ayo login";
+
+    document.write(`<p>${sapa}</p>`);
+</script>
+</body>
+</html>

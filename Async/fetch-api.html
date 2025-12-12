@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fetch API</title>
+</head>
+<body>
+<table>
+    <tbody>
+    <tr>
+        <td>ID:</td>
+        <td id="id"></td>
+    </tr>
+    <tr>
+        <td>Nama:</td>
+        <td id="nama"></td>
+    </tr>
+    <tr>
+        <td>Harga</td>
+        <td id="harga"></td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    function getBooks() {
+        const request = new Request("api/books.json", {
+            method: "GET"
+        });
+
+        fetch(request)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network response was not ok " + response.statusText);
+                }
+                return response.json();
+            })
+            .then(data => {
+                document.getElementById("id").innerText = data.id;
+                document.getElementById("nama").innerText = data.nama;
+                document.getElementById("harga").innerText = data.harga;
+
+                console.log(data);
+            })
+            .catch(error => console.error("There has been a problem with your fetch operation:", error));
+    }
+
+    getBooks();
+</script>
+</body>
+</html>

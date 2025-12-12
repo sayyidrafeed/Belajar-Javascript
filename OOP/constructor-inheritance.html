@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Constructor Inheritance</title>
+</head>
+<body>
+<script>
+    function Parent(dad, mom) {
+        this.father = dad;
+        this.mother = mom;
+        this.sayHello = function (name) {
+            console.log(`Hello ${name}, your parent is ${dad} and ${mom}`);
+        };
+    }
+
+    function Child(dad, mom, fullName) {
+        Parent.call(this, dad, mom);
+        this.name = fullName;
+    }
+
+    const family = new Child("Hatta", "Lya", "Rafee");
+
+    console.table(family);
+
+    family.sayHello();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Form</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="username">Userame:</label>
+        <input type="email" id="username" name="username" required> <br>
+        <label for="password">Passowrd:</label>
+        <input type="password" id="password" name="password" required> <br>
+        <button type="submit" id="login">Submit</button>
+    </form>
+    <div id="response"></div>
+<script>
+    function doLogin() {
+        const ajax = new XMLHttpRequest();
+        ajax.open("POST", "https://be-jelajah-budaya.vercelhttps://be-jelajah-budaya.vercel.app/users/login");
+        ajax.onload = function() {
+            const response = document.getElementById('response');
+            response.innerText = ajax.responseText;
+            console.log(response);
+        }
+        ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+        const form = new URLSearchParams();
+        form.append("username", document.getElementById("username").value);
+        form.append("password", document.getElementById("password").value);
+
+        ajax.send(form);
+    }
+
+    document.getElementById("login").onclick = doLogin;
+</script>
+</body>
+</html>

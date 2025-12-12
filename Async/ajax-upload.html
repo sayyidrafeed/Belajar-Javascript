@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Upload Data</title>
+</head>
+<body>
+    <h1>Ajax Upload Data</h1>
+    <input type="file" id="fileInput">
+    <button onclick="doRegister()">Register Event</button>
+<script>
+    function doRegister() {
+        const ajax = new XMLHttpRequest();
+        ajax.open("POST", "https://be-jelajah-budaya.vercel.app/create-events");
+        ajax.onload = function() {
+            console.log(ajax.responseText);
+        }
+
+        const form = new FormData(ajax);
+        form.append("name", "Bali Arts Festival");
+        form.append("date", "2023-06-01");
+        form.append("location", "Bali");
+        form.append("description", "A celebration of Balinese culture and arts.");
+        form.append("image", document.getElementById("fileInput").files(0));
+
+        ajax.send(form);
+    }
+
+</script>
+</body>
+</html>

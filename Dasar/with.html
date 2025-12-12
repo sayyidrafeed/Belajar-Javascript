@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>With Statement</title>
+</head>
+<body>
+<script>
+    const person = {
+        firstName: 'John',
+        lastName: 'Doe',
+        age: 4
+    };
+
+    // Cara Biasa
+    // console.log(person.firstName);
+    // console.log(person.lastName);
+    // console.log(person.age);
+
+    // Dengan With
+    with (person) {
+        console.log(firstName);
+        console.log(lastName);
+        console.log(age);
+    }
+</script>
+</body>
+</html>

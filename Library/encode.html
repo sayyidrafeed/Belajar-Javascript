@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Encode</title>
+</head>
+<body>
+<script>
+
+    {
+        const url = "www.aduhgantengnya.com/privasi/ytta?suka suka kamu";
+        console.log(url);
+
+        const encoded = encodeURI(url);
+        console.log(encoded);
+
+        const decoded = decodeURI(encoded);
+        console.log(decoded);
+
+    }
+
+    {
+        const url = "www.aduhgantengnya.com/privasi/ytta";
+        const value = "&sukasukaaku";
+
+        console.log(url + value);
+
+        const encoded = encodeURIComponent(value);
+        console.log(url + encoded);
+
+        const decoded = decodeURIComponent(encoded);
+        console.log(url + decoded);
+    }
+
+</script>
+</body>
+</html>

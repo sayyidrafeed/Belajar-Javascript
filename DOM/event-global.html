@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Global</title>
+</head>
+<body>
+<input id="klik" type="button" value="klik mas">
+<script>
+
+    const klik = document.getElementById('klik');
+    klik.onclick = () => {
+        klik.setAttribute('value', 'asal klik sih, udah ku hek');
+        console.log(klik.value);
+    }
+
+</script>
+</body>
+</html>

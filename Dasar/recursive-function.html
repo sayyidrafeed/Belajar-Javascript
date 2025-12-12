@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Recursive Function</title>
+</head>
+<body>
+<script>
+
+    // Cara Biasa
+    // function factorial(value) {
+    //     let result = 1;
+    //     for (let i = 1; i <= value; i++) {
+    //         result *= i;
+    //     }
+    //
+    //     return result;
+    // }
+
+    // console.log(factorial(5));
+
+    // Cara Rekursif
+
+    // function recursiveFunction(value) {
+    //     if (value === 1) {
+    //         return 1;
+    //     } else {
+    //         return value * recursiveFunction(value - 1);
+    //     }
+    // }
+    //
+    // console.log(recursiveFunction(7 ));
+
+    function biasa(value) {
+        for (let i = 0; i <= value; i++) {
+            console.log(i);
+        }
+    }
+
+    biasa(10);
+
+    function recursive(value) {
+        if (value === value) {
+            return 1;
+        } else {
+            return value
+        }
+    }
+</script>
+</body>
+</html>

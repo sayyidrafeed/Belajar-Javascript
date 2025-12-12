@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set Timeout</title>
+</head>
+<body>
+<script>
+    const addElement = () => {
+        const header = document.createElement("h1");
+        header.textContent = "Hello, RFD!";
+        document.body.appendChild(header);
+    }
+
+    setTimeout(addElement, 1000);
+    // setInterval(addElement, 100);
+</script>
+</body>
+</html>

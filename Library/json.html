@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+<script>
+    {
+        const person = {
+            name: "John",
+            age: 30,
+            address: {
+                city: "New York",
+                zip: "10001"
+            },
+            hobbies: ["reading", "traveling", "swimming"]
+        };
+        console.log(person);
+
+        const json = JSON.stringify(person);
+        const personAgain = JSON.parse(json);
+
+        console.info(json);
+        console.info(personAgain);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Belajar function</title>
+</head>
+<body>
+<script>
+    function tanyaNama(callback) {
+        const nama = prompt("Isi namamu..");
+        callback(nama);
+    }
+
+    function sapa(nama) {
+        console.log(`Halo! ${nama}`);
+    }
+
+    tanyaNama(sapa);
+</script>
+</body>
+</html>

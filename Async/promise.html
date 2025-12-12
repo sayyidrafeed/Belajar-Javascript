@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise</title>
+</head>
+<body>
+<script>
+
+    const promise = new Promise((resolve, reject) => {
+        const ajax = new XMLHttpRequest();
+        ajax.open('GET', 'api/books.json');
+        ajax.onload = () => {
+            if (ajax.status === 200) {
+                const data = ajax.responseText;
+                resolve(data);
+            } else {
+                reject('Error: ' + ajax.status);
+            }
+        };
+        ajax.send();
+    })
+
+    console.log(promise)
+
+</script>
+</body>
+</html>

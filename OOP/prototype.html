@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prototype</title>
+</head>
+<body>
+<script>
+    function User(name, email) {
+        this.name = name;
+        this.email = email;
+        this.greet = function () {
+            console.log(`Hello ${this.name}!`);
+        }
+    }
+
+    User.prototype.sayBye = function () {
+        console.log(`Bye ${this.name}`);
+    }
+
+    function Admin(name, email) {
+        this.name = name;
+        this.email = email;
+        this.greet = function () {
+            console.log(`Hello ${this.name}!`);
+        }
+        this.grantAccess = function () {
+            // The function will be here...
+        }
+    }
+
+    const user1 = new User("John", "johndoe@gmail.com");
+    user1.greet();
+
+    console.log(user1);
+    console.table(user1);
+
+    const admin1 = new Admin("Rafee", "rafee.djamil@gmail.com");
+    console.log(admin1);
+
+    User.prototype.run = function () {
+        console.log(`${this.name} is running!`);
+    }
+</script>
+</body>
+</html>

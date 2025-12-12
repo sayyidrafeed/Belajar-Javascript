@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Named Node Map</title>
+</head>
+<body>
+<img id="logo" src="https://cdn3.iconfinder.com/data/icons/social-network-30/512/social-06-512.png" alt="anjay">
+
+<script>
+    const logo = document.getElementById('logo');
+    console.log(logo);
+    console.log(logo.attributes);
+    let attributes = logo.attributes;
+        for (const attribute of attributes) {
+        console.log(`attribute: ${attribute.name}, value: ${attribute.value}`);
+    }
+</script>
+</body>
+</html>

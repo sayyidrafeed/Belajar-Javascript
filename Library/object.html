@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object</title>
+</head>
+<body>
+<script>
+
+    {
+        const car = {
+            manufacturer: "Toyota",
+            model: "Terios"
+        }
+        console.log(car);
+
+        Object.freeze(car);
+
+        car.manufacturer = "Toyotaa";
+        console.log(car);
+        delete Object.freeze(car);
+        car.manufacturer = "Toyotaa";
+        console.log(car);
+    }
+
+    {
+        const person = {
+            name: "Johan",
+            age: 30,
+            deade: true
+        };
+
+        const user = {
+            name: "username",
+            age: 0
+        };
+
+        Object.assign(user, person);
+        console.log(user);
+
+        console.log(Object.values(user));
+        console.log(Object.getOwnPropertyNames(user));
+    }
+
+</script>
+</body>
+</html>

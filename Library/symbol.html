@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Symbol</title>
+</head>
+<body>
+<script>
+
+    const key = Symbol('pin');
+
+    const user = {
+        name: "Alya",
+        [key]: 1234
+    };
+
+    console.log(user);
+
+    for (users in user) {
+        console.log(users);
+    }
+    // console.log(user.[key]);
+
+</script>
+</body>
+</html>

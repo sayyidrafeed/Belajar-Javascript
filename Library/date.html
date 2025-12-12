@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date</title>
+</head>
+<body>
+<script>
+    {
+        const date = Date.now();
+        console.log(date);
+
+        const dateUnix = new Date(date);
+        console.log(dateUnix);
+
+        console.log(dateUnix.getTime());
+    }
+
+    {
+        // const date = Date.now();
+        console.log(Date.parse("2023-10-01T00:00:00Z"));
+    }
+
+    {
+        const date = new Date();
+        date.setFullYear(2025);
+
+        console.log(date.getTimezoneOffset());
+    }
+</script>
+</body>
+</html>

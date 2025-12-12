@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Practice #3</title>
+</head>
+<body>
+<script>
+    let age = Number(prompt("Masukkan Umurmu"));
+
+    if (age <= 12) {
+        console.log(`${age} adalah Anak-anak.`)
+    } else if (age <= 21) {
+        console.log(`${age} adalah Remaja.`)
+    } else if (age <= 60) {
+        console.log(`${age} adalah Dewasa`)
+    } else if (age > 60) {
+        console.log(`${age} adalah Lanjut Usia.`)
+    } else {
+        console.log(`${age} Bukan angka yang valid.`)
+    }
+
+    let user = {
+        profile: {
+            name: "John"
+        }
+    };
+
+    console.log(`Nama: ${user?.profile?.name ?? "Tidak ada nama"}`);
+    console.log(`Alamat: ${user?.profile?.address ?? "Tidak ada alamat"}`);
+
+    console.log("1 - 10");
+    for (let i = 1; i <= 10; i++) {
+        console.log(i);
+    }
+
+    const fruits = ["Apple", "Orange", "Mango", "Strawberry"];
+    for (const i of fruits) {
+        console.log(i);
+    }
+
+    const person = {
+        name: "John",
+        age: 5,
+        job: "Developer",
+    };
+    for (const i in person) {
+        console.log(`${i} = ${person[i]}`);
+    }
+
+    console.log("Space");
+    console.log("Space");
+    console.log("Space");
+
+    let day = "Sabtu";
+
+    switch(day) {
+        case "Senin":
+            console.log("Duh le");
+            break;
+        case "Selasa":
+            console.log("Hari ke-2");
+            break;
+        case "Rabu":
+            console.log("Bentar lagi");
+            break;
+        case "Kamis":
+            console.log("Bentar lagiii");
+            break;
+        case "Jumat":
+            console.log("Sabar cokkkk");
+            break;
+        case "Sabtu":
+        case "Minggu":
+            console.log("Aduh enaknyoo");
+            break;
+        default:
+            console.log("W doxxing lu")
+    }
+
+
+</script>
+</body>
+</html>

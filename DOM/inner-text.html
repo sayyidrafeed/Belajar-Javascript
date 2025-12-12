@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inner Text</title>
+</head>
+<body>
+<p id="text">Ini paragraf
+    <script>
+        console.log("asdasd")
+    </script>
+    <b>asduh</b>
+</p>
+
+<script>
+    const text = document.getElementById("text");
+    console.log(text);
+    console.log(text.textContent);
+    console.log(text.innerText);
+    console.log(text.innerHTML);
+</script>
+</body>
+</html>

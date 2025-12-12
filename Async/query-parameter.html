@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Query Parameter</title>
+</head>
+<body>
+<input type="text" id="search" name="search" required>
+<input type="button" id="btnSearch" value="Search">
+<script>
+    function doSearch() {
+        const ajax = new XMLHttpRequest();
+
+        const param = new URLSearchParams();
+        param.append("search", document.getElementById("search").value);
+
+        ajax.open("GET", "https://be-jelajah-budaya.vercel.app/events?" + param.toString());
+        ajax.onload = function() {
+            console.log(ajax.responseText);
+            }
+
+        ajax.send(param);
+        console.log(ajax.responseText);
+    }
+
+    document.getElementById("btnSearch").onclick = doSearch;
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Getter dan Setter</title>
+</head>
+<body>
+<script>
+  // Cara dengan function
+  // const person = {
+  //   firstName: "Rafee",
+  //   lastName: "Djamil",
+  //   fullName: function () {
+  //     return `${this.firstName + " " + this.lastName}`;
+  //   }
+  // }
+  //
+  // console.log(person.fullName());
+
+  // Cara dengan Getter
+  const person = {
+    firstName: "Rafee",
+    lastName: "Djamil",
+    get fullName() {
+      return `${this.firstName} ${this.lastName}`;
+    }
+  };
+
+  console.log(person.fullName);
+</script>
+</body>
+</html>
